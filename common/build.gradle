@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'Android-Common'
+
+    publishedGroupId = 'be.mickverm.common'
+    libraryName = 'Android Common'
+    artifact = 'common'
+
+    libraryDescription = 'Common utility functions and extensions to use during Android development.'
+
+    siteUrl = 'https://github.com/mickverm/Android-Common'
+    gitUrl = 'https://github.com/mickverm/Android-Common.git'
+
+    libraryVersion = '0.1.0'
+
+    developerId = 'Mickverm'
+    developerName = 'Michiel Vermeersch'
+    developerEmail = 'mick.vermeersch@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.robolectric:robolectric:$robolectricVersion"
+}
+
+apply from: 'install.gradle'
+apply from: 'bintray.gradle'
