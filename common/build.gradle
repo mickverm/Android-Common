@@ -15,7 +15,7 @@ ext {
     siteUrl = 'https://github.com/mickverm/Android-Common'
     gitUrl = 'https://github.com/mickverm/Android-Common.git'
 
-    libraryVersion = '0.2.0'
+    libraryVersion = '0.3.0'
 
     developerId = 'Mickverm'
     developerName = 'Michiel Vermeersch'
@@ -35,8 +35,6 @@ android {
 
         consumerProguardFiles 'consumer-rules.pro'
     }
-
-    testOptions.unitTests.includeAndroidResources = true
 }
 
 dependencies {
