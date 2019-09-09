@@ -15,7 +15,7 @@ ext {
     siteUrl = 'https://github.com/mickverm/Android-Common'
     gitUrl = 'https://github.com/mickverm/Android-Common.git'
 
-    libraryVersion = '0.3.0'
+    libraryVersion = '0.4.0'
 
     developerId = 'Mickverm'
     developerName = 'Michiel Vermeersch'
